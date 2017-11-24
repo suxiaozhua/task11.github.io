@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+
+html {
+  font-size:62.5%;
+}
+
+$color-blue: #5FC0CD;
+$font-color-gray: #E1E5E7;
+$background-gray: #EFF0F4;
+$color-white: #ffffff;
+$screen: 640px;
+$percent100: 100%;
+
+body {
+  margin: 0 auto;
+  background-color: $background-gray;
+  padding: 0;
+  max-width: $screen;
+}
+
+/** 页头 **/
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 1rem;
+  top: 0;
+  padding: 1.3rem 0;
+  background-color: $color-blue;
+  line-height: .8rem;
+  max-width: $screen;
+  font-size: 1.5rem;
+  color: $color-white;
+    a {
+      cursor: pointer;
+      color: $color-white;
+      padding: 0 1rem;
+      border-bottom: none;
+      text-decoration: none;
+    }
+}
+
+/**页头中间标题**/
+
+h2 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.sign-in {
+  position: absolute;
+  top: 1.3rem;
+  right: 0;
+}
+
+.close {
+  position: absolute;
+  top: 1.3rem;
+  left: 0;
+}
+
+/** 主文本区 **/
+
+main {
+  position: relative;
+  top:4.5rem;
+}
+
+.login {
+  width: $percent100;
+  padding-bottom: 3rem;
+}
+
+.loginBar1,
+.loginBar2 {
+  background-color: $color-white;
+  margin-bottom: 1rem;
+}
+
+.loginImg,
+.loginInput {
+  vertical-align: middle;
+}
+
+.loginImg {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.loginImg {
+  transform: scale(.5,.5);
+}
+
+.loginInput {
+  display: inline-block;
+}
+
+input {
+  outline:none;/**去掉输入时蓝色的框**/
+  padding-left: 20px;
+  border-left: .1px solid #E1E5E7;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  width: $percent100;
+  height: 2.6rem;
+}
+
+/** 改变输入框中字体颜色 **/
+
+//chrome谷歌浏览器，Safari苹果浏览器
+
+input[name="telnumber"]::-webkit-input-placeholder { /* WebKit browsers */
+  color: $font-color-gray;
+  font-size:15px;
+}
+
+input[name="pwd"]::-webkit-input-placeholder { /* WebKit browsers */
+  color: $font-color-gray;
+  font-size:15px;
+}
+
+//firefox火狐浏览器
+input[name="telnumber"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $font-color-gray;
+  font-size:15px;
+}
+input[name="telnumber"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $font-color-gray;
+  font-size:15px;
+}
+
+input[name="pwd"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $font-color-gray;
+  font-size:15px;
+}
+input[name="pwd"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $font-color-gray;
+  font-size:15px;
+}
+
+//IE浏览器
+input[name="telnumber"]:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: $font-color-gray;
+  font-size:15px;
+}
+
+input[name="pwd"]:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: $font-color-gray;
+  font-size:15px;
+}
+
+/** 登录键 **/
+.btn-login {
+  cursor: pointer;
+  width: $percent100;
+  padding: 1.5rem;
+  background-color: $color-blue;
+  border: none;
+  font-size: 1.5rem;
+  color: $color-white;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+/**忘记密码链接**/
+
+.retrieval {
+  float: right;
+  padding: 0 1rem;
+}
+
+a {
+  color: $color-blue;
+}
